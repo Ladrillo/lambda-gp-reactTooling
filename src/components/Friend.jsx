@@ -1,5 +1,5 @@
 import React from 'react';
-
+import pt from 'prop-types';
 
 export default function Friend({ friend, deleteFriend, markAsEnemy, setFriendToBeEdited }) {
   const onEdit = event => {
@@ -31,3 +31,7 @@ export default function Friend({ friend, deleteFriend, markAsEnemy, setFriendToB
     </div>
   );
 }
+
+Friend.propTypes = {
+
+};
