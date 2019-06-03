@@ -33,5 +33,5 @@ export default function Friend({ friend, deleteFriend, markAsEnemy, setFriendToB
 }
 
 Friend.propTypes = {
-
+  friend: pt.object.isRequired,
 };
