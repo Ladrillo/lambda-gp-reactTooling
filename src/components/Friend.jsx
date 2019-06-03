@@ -34,8 +34,11 @@ export default function Friend({ bold, friend, deleteFriend, markAsEnemy, setFri
 }
 
 const customAgeValidator = (props, propName, componentName) => {
+  if (!props[propName]) {
+    return new Error(`friend.${propName} in ${componentName} is a required property on friends!`);
+  }
   if (Number(props[propName]) % 2 !== 0) {
-    return new Error(`${propName} inside of ${componentName} needs to be even!`);
+    return new Error(`${propName} in ${componentName} needs to be even!`);
   }
 };
 
