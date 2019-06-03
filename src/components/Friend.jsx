@@ -35,7 +35,14 @@ export default function Friend({ friend, deleteFriend, markAsEnemy, setFriendToB
 // const defaultCallback = () => console.log('you clicked something!');
 
 Friend.propTypes = {
-  friend: pt.object.isRequired,
+
+  friend: pt.shape({
+    id: pt.string.isRequired,
+    name: pt.string.isRequired,
+    age: pt.string.isRequired,
+    friendly: pt.bool.isRequired,
+  }).isRequired,
+
   deleteFriend: pt.func.isRequired,
   markAsEnemy: pt.func.isRequired,
   setFriendToBeEdited: pt.func.isRequired,
