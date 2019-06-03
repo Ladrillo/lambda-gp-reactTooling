@@ -32,6 +32,20 @@ export default function Friend({ friend, deleteFriend, markAsEnemy, setFriendToB
   );
 }
 
+// const defaultCallback = () => console.log('you clicked something!');
+
 Friend.propTypes = {
   friend: pt.object.isRequired,
+  deleteFriend: pt.func.isRequired,
+  markAsEnemy: pt.func.isRequired,
+  setFriendToBeEdited: pt.func.isRequired,
+  bold: pt.bool,
 };
+
+Friend.defaultProps = {
+  bold: false,
+};
+
+// USE PROP TYPES ALL OVER!!! all components, all props
+// ALWAYS MAKE REQUIRED, if they are crucial
+// YOu can make non-required, for non-crucial stuff (bold), PROVIDE DEFAULT

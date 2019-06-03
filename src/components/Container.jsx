@@ -135,10 +135,10 @@ export default class Container extends React.Component {
             this.state.friends.map(friend => (
               <Friend
                 key={friend.id}
-                // friend={friend}
-                deleteFriend={this.deleteFriend}
-                markAsEnemy={this.markAsEnemy}
-                setFriendToBeEdited={this.setFriendToBeEdited}
+                friend={friend}
+                // deleteFriend={this.deleteFriend}
+                // markAsEnemy={this.markAsEnemy}
+                // setFriendToBeEdited={this.setFriendToBeEdited}
               />
             ))
           }
