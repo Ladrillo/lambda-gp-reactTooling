@@ -1,7 +1,7 @@
 import React from 'react';
 import pt from 'prop-types';
 
-export default function Friend({ friend, deleteFriend, markAsEnemy, setFriendToBeEdited }) {
+export default function Friend({ bold, friend, deleteFriend, markAsEnemy, setFriendToBeEdited }) {
   const onEdit = event => {
     // One liner. Implement using setFriendToBeEdited
     setFriendToBeEdited(friend.id);
@@ -19,6 +19,7 @@ export default function Friend({ friend, deleteFriend, markAsEnemy, setFriendToB
 
   const friendStyle = {
     color: friend.friendly ? 'green' : 'red',
+    fontWeight: bold ? 'bold' : 'initial',
   };
 
   return (
@@ -31,9 +32,6 @@ export default function Friend({ friend, deleteFriend, markAsEnemy, setFriendToB
     </div>
   );
 }
-
-// const defaultCallback = () => console.log('you clicked something!');
-
 
 const customAgeValidator = (props, propName, componentName) => {
   if (Number(props[propName]) % 2 !== 0) {

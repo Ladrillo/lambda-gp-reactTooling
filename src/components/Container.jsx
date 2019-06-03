@@ -12,7 +12,7 @@ const initialState = {
   friends: [
     { id: uuid(), name: 'Delba', age: '22', friendly: true },
     { id: uuid(), name: 'Maxime', age: '20', friendly: true },
-    { id: uuid(), name: 'Giacomo', age: '10', friendly: true },
+    { id: uuid(), name: 'Giacomo', age: '1', friendly: true },
   ],
   currentFriendId: null,
   form: initialFormState,
@@ -134,6 +134,7 @@ export default class Container extends React.Component {
           {
             this.state.friends.map(friend => (
               <Friend
+                bold
                 key={friend.id}
                 friend={friend}
                 deleteFriend={this.deleteFriend}
