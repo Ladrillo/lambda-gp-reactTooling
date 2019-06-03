@@ -10,9 +10,9 @@ const initialFormState = {
 
 const initialState = {
   friends: [
-    { id: uuid(), name: 'Delba', age: '25', friendly: true },
-    { id: uuid(), name: 'Maxime', age: '27', friendly: true },
-    { id: uuid(), name: 'Giacomo', age: '29', friendly: true },
+    { id: uuid(), name: 'Delba', age: '22', friendly: true },
+    { id: uuid(), name: 'Maxime', age: '20', friendly: true },
+    { id: uuid(), name: 'Giacomo', age: '10', friendly: true },
   ],
   currentFriendId: null,
   form: initialFormState,

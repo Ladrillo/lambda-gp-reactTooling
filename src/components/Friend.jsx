@@ -34,12 +34,20 @@ export default function Friend({ friend, deleteFriend, markAsEnemy, setFriendToB
 
 // const defaultCallback = () => console.log('you clicked something!');
 
+
+const customAgeValidator = (props, propName, componentName) => {
+  if (Number(props[propName]) % 2 !== 0) {
+    return new Error(`${propName} inside of ${componentName} needs to be even!`);
+  }
+};
+
+
 Friend.propTypes = {
 
   friend: pt.shape({
     id: pt.string.isRequired,
     name: pt.string.isRequired,
-    age: pt.string.isRequired,
+    age: customAgeValidator,
     friendly: pt.bool.isRequired,
   }).isRequired,
 
